@@ -37,7 +37,8 @@
     }
   },
   "manage-user": {
-    "add": "Add a new user",
+    "text_add": "Add a new user",
+    "text_edit": "Update user information",
     "email": "Email",
     "password": "Password",
     "first-name": "First name",
@@ -48,6 +49,7 @@
     "position": "Position",
     "role": "Role",
     "image": "Avatar",
-    "save": "Save"
+    "save": "Save",
+    "edit": "Update"
   }
 }
