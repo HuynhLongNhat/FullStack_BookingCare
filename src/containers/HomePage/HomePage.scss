@@ -118,6 +118,10 @@
 
 }
 
+.slick-disabled {
+    display: none !important;
+}
+
 .slick-next {
     right     : -12px !important;
     height    : 48px !important;
