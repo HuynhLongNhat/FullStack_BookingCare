@@ -6,6 +6,7 @@ import "./DetailDoctor.scss";
 import { getDetailInforDoctor } from "../../../services/userService";
 import { LANGUAGES } from "../../../utils";
 import DoctorSchedule from "./DoctorSchedule";
+import DoctorExtraInfor from "./DoctorExtraInfor";
 class DetailDoctor extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +38,7 @@ class DetailDoctor extends Component {
   render() {
     let { language } = this.props;
     let { detailDoctor } = this.state;
+
     let nameVi = "",
       nameEn = "";
     if (detailDoctor && detailDoctor.positionData) {
@@ -51,7 +53,9 @@ class DetailDoctor extends Component {
             <div
               className="content-left"
               style={{
-                backgroundImage: `url(${detailDoctor.image})`,
+                backgroundImage: `url(${
+                  detailDoctor && detailDoctor.image ? detailDoctor.image : ""
+                })`,
               }}
             ></div>
             <div className="content-right">
@@ -67,11 +71,16 @@ class DetailDoctor extends Component {
               </div>
             </div>
           </div>
+
           <div className="schedule-doctor">
             <div className="content-left">
               <DoctorSchedule doctorIdFromParent={this.state.currentDoctorId} />
             </div>
-            <div className="content-right"></div>
+            <div className="content-right">
+              <DoctorExtraInfor
+                doctorIdFromParent={this.state.currentDoctorId}
+              />
+            </div>
           </div>
           <div className="detail-infor-doctor">
             {detailDoctor &&
