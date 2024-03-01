@@ -1,6 +1,7 @@
 export const adminMenu = [
   {
     //quản lí người dùng
+
     name: "menu.admin.manage-user",
     menus: [
       {

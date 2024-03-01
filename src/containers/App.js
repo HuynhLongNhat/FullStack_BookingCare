@@ -22,6 +22,7 @@ import Homepage from "./HomePage/Homepage";
 import CustomScrollbars from "../components/CustomScrollbars";
 import DetailDoctor from "./Patient/Doctor/DetailDoctor";
 import Doctor from "../routes/Doctor";
+import VerifyEmail from "./Patient/VerifyEmail";
 class App extends Component {
   handlePersistorState = () => {
     const { persistor } = this.props;
@@ -65,22 +66,15 @@ class App extends Component {
                     path={"/doctor/"}
                     component={userIsAuthenticated(Doctor)}
                   />
+
+                  <Route
+                    path={path.VERIFY_EMAIL_BOOKING}
+                    component={VerifyEmail}
+                  />
                 </Switch>
               </CustomScrollbars>
             </div>
-            {/* 
-            <ToastContainer
-              className="toast-container"
-              toastClassName="toast-item"
-              bodyClassName="toast-item-body"
-              autoClose={false}
-              hideProgressBar={true}
-              pauseOnHover={false}
-              pauseOnFocusLoss={true}
-              closeOnClick={false}
-              draggable={false}
-              closeButton={<CustomToastCloseButton />}
-            /> */}
+
             <ToastContainer
               position="top-right"
               autoClose={5000}
