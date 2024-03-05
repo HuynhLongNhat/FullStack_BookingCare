@@ -63,7 +63,7 @@ class OutStandingDoctor extends Component {
                       key={index}
                       onClick={() => this.handleViewDetailDoctor(item)}
                     >
-                      <div class="customize-border">
+                      <div className="customize-border">
                         <div className="outer-bg">
                           <div
                             className="bg-image section-out-standing-doctor"

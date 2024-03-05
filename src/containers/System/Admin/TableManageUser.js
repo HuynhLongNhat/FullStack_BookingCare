@@ -69,13 +69,13 @@ class TableManageUser extends Component {
                     <td>{item.address}</td>
                     <td>
                       <button
-                        class="btn-edit"
+                        className="btn-edit"
                         onClick={() => this.handleEditUser(item)}
                       >
                         <i className="fas fa-pencil-alt"></i>
                       </button>
                       <button
-                        class="btn-delete"
+                        className="btn-delete"
                         onClick={() => this.handleDeleteUser(item)}
                       >
                         <i className="fas fa-trash"></i>
