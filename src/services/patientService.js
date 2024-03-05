@@ -14,7 +14,9 @@ let postBookAppointment = (data) => {
         !data.email ||
         !data.doctorId ||
         !data.timeType ||
-        !data.date | !data.fullName
+        !data.date | !data.fullName ||
+        !data.selectedGender ||
+        !data.address
       ) {
         resolve({
           errCode: 1,
@@ -39,6 +41,9 @@ let postBookAppointment = (data) => {
           defaults: {
             email: data.email,
             roleId: "R3",
+            gender: data.selectedGender,
+            address: data.address,
+            firstName : data.fullName
           },
         });
 
